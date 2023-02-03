@@ -3,17 +3,25 @@
 // (làm tròn kq đến 2 chữ só thập phân)
 
 alert('pt bac 1: ax+b = 0'); 
-var a = 1*prompt('Nhap a: '); 
-var b = 1*prompt('Nhap b: '); 
+var a = prompt('Nhap a: '); 
+var b = prompt('Nhap b: '); 
 
+// Kiểm tra a, b 
 while (Check(a) == false)
 {
-    a = 1*prompt('Nhap a: ');  
+    a = prompt('Nhap a: ');  
 }
 while (Check(b) == false)
 {
-    b = 1*prompt('Nhap b: ');  
+    b = prompt('Nhap b: ');  
 }
+
+// console.log(a); console.log(typeof(a));  
+// console.log(b); console.log(typeof(a));
+a= 1*a; // string -> number
+b= 1*b; 
+// console.log(a); console.log(typeof(a));  
+// console.log(b); console.log(typeof(a));
 
 
 if (a != 0 && b!= 0)
@@ -28,7 +36,7 @@ else if (a== 0 && b==0)
 else if (a== 0 && b!=0)
 {
     console.log('pt vo nghiem')
-}
+} 
 
 
 function Check(value)
