@@ -3,22 +3,30 @@
 // (làm tròn kq đến 2 chữ só thập phân)
 
 alert('pt bac 2: ax^2 + bx + c = 0'); 
-var a = Number(prompt('Nhap a:')); 
-var b = Number(prompt('Nhap b:')); 
-var c = Number(prompt('Nhap c:')); 
+var a = prompt('Nhap a:');  
+var b = prompt('Nhap b:'); 
+var c = prompt('Nhap c:'); 
 
 while (Check(a) == false)
 {
-    a = Number(prompt('Nhap a: '));  
+    a = prompt('Nhap a: ');  
 }
 while (Check(b) == false)
 {
-    b = Number(prompt('Nhap b: '));  
+    b = prompt('Nhap b: ');  
 }
 while (Check(c) == false)
 {
-    c = Number(prompt('Nhap c: '));  
+    c = prompt('Nhap c: ');  
 }
+
+// console.log(a); console.log(typeof(a));  
+// console.log(b); console.log(typeof(a));
+a= Number(a); // string -> number
+b= Number(b); 
+c= Number(c);  
+// console.log(a); console.log(typeof(a));  
+// console.log(b); console.log(typeof(a));
 
 
 var delta = b**2 - 4*a*c; 
