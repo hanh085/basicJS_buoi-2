@@ -1,6 +1,12 @@
 // Bài 8: Viết chương trình nhập 1 số và kiểm tra có phải số nguyên tố không? 
 
-var n = 1*prompt('Nhập 1 số'); 
+var n = prompt('Nhập 1 số'); 
+while (Check(n) == false)
+{
+    n = prompt('Nhập 1 số'); 
+}
+n= Number(n); 
+
 if(isPrime(n)==true)
 {
     console.log('%i là số nguyên tố', n);
@@ -11,7 +17,8 @@ else
 }
 
 
-function isPrime(value)
+
+function Check(value)
 {
     if(value === '' || value === null)
     {
@@ -23,39 +30,33 @@ function isPrime(value)
         console.log('giá trị ko là định dạng số'); 
         return false; 
     }
-    else if (value <= 0)
+
+    return true; 
+}
+
+function isPrime(value)
+{
+    if (value < 2)
     {
-        console.log('giá trị <= 0'); 
         return false; 
     }
-    else if (Number.isInteger(value) == false)
+    else if(value ==2)
     {
-        console.log('giá trị không là số nguyên !'); 
-        return false; 
+        return true; 
     }
-    else // kiểm tra số nguyên tố
+    else 
     {
-        if (value < 2)
+        var m= Math.sqrt(value); 
+        for(let i=3; i<=m; i+=2)
         {
-            return false; 
-        }
-        else if(value ==2)
-        {
-            return true; 
-        }
-        else 
-        {
-            var m= Math.sqrt(value); 
-            for(let i=3; i<=m; i+=2)
+            if(value%i ==0)
             {
-                if(value%i ==0)
-                {
-                    return false; 
-                }
+                return false; 
             }
-            return true; 
         }
+        return true; 
     }
+    
 }
 
 
