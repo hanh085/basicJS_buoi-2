@@ -31,7 +31,7 @@ if (chieuRong === '' || chieuRong === null) {
 
 if (check) {
 
-    var chuVi = (chieuDai + chieuRong) * 2;
+    var chuVi = (chieuDai + chieuRong) * 2; 
     var dienTich = chieuDai * chieuRong;
 
     console.log("Chu vi: " + chuVi);
